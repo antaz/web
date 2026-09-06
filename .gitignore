@@ -1,4 +1,5 @@
 .direnv/
+.gems/
 .envrc
 output/
 tmp/
