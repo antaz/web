@@ -2,28 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>A Brand New Nanoc Site - <%= @item[:title] %></title>
+    <title>Underground Specs</title>
     <link rel="stylesheet" href="/stylesheet.css">
-
-    <!-- you don't need to keep this, but it's cool for stats! -->
     <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
   </head>
   <body>
-    <div id="main">
-      <%= yield %>
-    </div>
-    <div id="sidebar">
-      <h2>Documentation</h2>
-      <ul>
-        <li><a href="https://nanoc.app/doc/">Documentation</a></li>
-        <li><a href="https://nanoc.app/doc/tutorial/">Tutorial</a></li>
-      </ul>
-      <h2>Community</h2>
-      <ul>
-        <li><a href="http://groups.google.com/group/nanoc/">Discussion group</a></li>
-        <li><a href="https://gitter.im/nanoc/nanoc">Gitter channel</a></li>
-        <li><a href="https://nanoc.app/contributing/">Contributing</a></li>
-      </ul>
+    <div id="container">
+        <div id="main">
+        <%= yield %>
+        </div>
+        <ul>
+            <li><a href="https://github.com/antaz">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/antrz/">LinkedIn</a></li>
+        </ul>
+        </div>
     </div>
   </body>
 </html>
