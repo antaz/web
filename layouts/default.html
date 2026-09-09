@@ -1,22 +1,25 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Underground Specs</title>
-    <link rel="stylesheet" href="/stylesheet.css">
-    <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <div id="container">
-        <div id="main">
-        <%= yield %>
+    <head>
+        <meta charset="utf-8" />
+        <title>Underground Specs</title>
+        <link rel="stylesheet" href="/stylesheet.css" />
+        <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="main"><%= yield %></div>
+            <footer>
+                <ul>
+                    <li><a href="https://github.com/antaz">Github</a></li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/antrz/"
+                            >LinkedIn</a
+                        >
+                    </li>
+                </ul>
+            </footer>
         </div>
-        <ul>
-            <li><a href="https://github.com/antaz">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/antrz/">LinkedIn</a></li>
-        </ul>
-        </div>
-    </div>
-  </body>
+    </body>
 </html>

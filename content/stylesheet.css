@@ -3,11 +3,38 @@ body {
   font-family: system-ui, sans-serif;
   font-size: 1rem;
   color: #1b1b1b;
-  background: #fff;
+  background: #f6f1e7;
 }
 
 #container {
   max-width: 900px;
   margin: 60px auto;
   padding: 0 24px;
+}
+
+header {
+  border-bottom: 1px solid #e8e5df;
+  padding: 20px 0;
+}
+
+h1 {
+    font-family: Georgia,'Times New Roman',serif;
+}
+
+header ul {
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header li {
+  color: #77736d;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+header li:hover {
+  color: #22201d;
 }
