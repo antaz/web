@@ -2,7 +2,7 @@
 
 passthrough '/robots.txt'
 passthrough '/images/**/*'
-passthrough '/.well-known/**/*'
+passthrough '/contact/pgp-key.asc'
 
 compile '/**/*.html' do
   filter :erb

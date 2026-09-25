@@ -8,7 +8,14 @@
         <script>
           (function() {
             const d = document.documentElement;
-            if (localStorage.getItem('theme') === 'dark') d.classList.add('dark');
+            const saved = localStorage.getItem('theme');
+            if (saved === 'dark') {
+              d.classList.add('dark');
+            } else if (saved === 'light') {
+              d.classList.remove('dark');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+              d.classList.add('dark');
+            }
           })();
         </script>
         <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>" />
