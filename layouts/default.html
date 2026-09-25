@@ -2,23 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Underground Specs</title>
+        <title><%= @item[:title] || 'Underground Specs' %></title>
+        <meta name="description" content="Minimal specs, experiments, and ideas." />
         <link rel="stylesheet" href="/stylesheet.css" />
+        <script>
+          (function() {
+            const d = document.documentElement;
+            if (localStorage.getItem('theme') === 'dark') d.classList.add('dark');
+          })();
+        </script>
         <meta name="generator" content="Nanoc <%= Nanoc::VERSION %>" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <div id="container">
+            <header class="site-header">
+                <a href="/">Underground Specs</a>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/blog/lorem-ipsum/">Blog</a>
+                    <a href="/gallery/">Gallery</a>
+                    <a href="/contact/">Contact</a>
+                    <a href="#" class="theme-toggle" onclick="document.documentElement.classList.toggle('dark');localStorage.setItem('theme',document.documentElement.classList.contains('dark')?'dark':'light');return false;" title="Toggle theme">◐</a>
+                </nav>
+            </header>
             <div id="main"><%= yield %></div>
             <footer>
-                <ul>
-                    <li><a href="https://github.com/antaz">Github</a></li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/antrz/"
-                            >LinkedIn</a
-                        >
-                    </li>
-                </ul>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p style="margin: 0;"><a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a></p>
+                    <p style="margin: 0;">
+                        <a href="https://github.com/antaz">GitHub</a> ·
+                        <a href="https://www.linkedin.com/in/antrz/">LinkedIn</a>
+                    </p>
+                </div>
             </footer>
         </div>
     </body>
